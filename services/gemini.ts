@@ -37,7 +37,7 @@ IMPORTANTE: Mantén siempre la fidelidad al Evangelio y un tono pastoral, espera
 Responde SIEMPRE en formato JSON.`;
 
 export const generateGospelContent = async (text: string, age: AgeRange): Promise<GospelOutput> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   
   const prompt = `Por favor, analiza el siguiente pasaje del Evangelio y genera el contenido para un niño de ${age} años. 
 Asegúrate de que la historia sea cautivadora, la analogía sea muy cercana a su vida y la oración sea muy sentida.
@@ -75,7 +75,7 @@ Texto del Evangelio:
 };
 
 export const generateColoringImage = async (sceneDescription: string, age: AgeRange): Promise<string | null> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   
   const isYoung = age === '4-6';
   const isMid = age === '7-9';
