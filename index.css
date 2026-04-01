@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-[#FDFCF8] text-gray-800;
+}
+
+.prose p {
+  @apply mb-4;
+}
